@@ -3,7 +3,7 @@
 }
 
 html {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: #707070;
 }
@@ -29,7 +29,7 @@ h4 {
 h5 {
     font-weight: 300;
     color: #B4B4B4;
-    margin: 0;
+    margin: 0 5px;
 }
 
 p {
@@ -40,6 +40,12 @@ p {
 
 .center {
     text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .bg-white {
@@ -85,9 +91,26 @@ p {
     max-width: 300px;
 }
 
+.tweet {
+    border-top: 2px solid #F8F8F8;
+    padding: 1rem;
+}
+
+.tweet p img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.tweet p {
+    margin-top: 0;
+    margin-left: 3rem;
+}
+
 .avatar-sm {
     border-radius: 50%;
     width: 2rem;
+    height: 2rem;
 }
 
 .logo {
