@@ -33,11 +33,16 @@
         </div>
         <div class="col-3of5 bg-white">
             <div class="tweet">
-                <form class="tweet-form" action="#">
-                    <img class="avatar-sm v-top" src="img/avatar.jpg" alt="avatar">                       
-                    <input class="input-tweet" type="text" placeholder="What's up?">
-                    <input class="hidden" type="file">
-                    <button class="btn-primary">Post</button>
+                <form action="#">
+                    <div class="row">
+                        <img class="avatar-sm v-top" src="img/avatar.jpg" alt="avatar">                       
+                        <textarea class="input-tweet" placeholder="What's up?"></textarea>
+                    </div>
+                    <div class="row tweet-actions">
+                        <input class="hidden" type="file">
+                        <button class="btn-clear"><i class="far fa-image"></i></button>
+                        <button class="btn-primary">Post</button>
+                    </div>
                 </form>
             </div>
             <div class="tweet">
