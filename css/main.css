@@ -94,6 +94,11 @@ p {
 .tweet {
     border-top: 2px solid #F8F8F8;
     padding: 1rem;
+    cursor: pointer;
+}
+
+.tweet:hover {
+    background-color: #FAFAFA;
 }
 
 .tweet p img {
