@@ -57,3 +57,5 @@ For backend support, reference to [Web Tweet Express](https://github.com/webdxd/
 
 ### Step by Step Guide
 1.1 [Columns](https://github.com/webdxd/web-tweet-static/blob/1.1-columns/notes/1.1-columns.md)
+
+1.2 [NavBar](https://github.com/webdxd/web-tweet-static/blob/1.2-navbar/notes/1.2-navbar.md)
