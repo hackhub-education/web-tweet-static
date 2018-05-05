@@ -54,3 +54,6 @@ For backend support, reference to [Web Tweet Express](https://github.com/webdxd/
 ## Get Started
 1. Fork this repo, then clone your forked repo to your work directory
 2. Drag `web-tweet-static` folder to your editor
+
+### Step by Step Guide
+1.1 [Columns](https://github.com/webdxd/web-tweet-static/blob/1.1-columns/notes/1.1-columns.md)
