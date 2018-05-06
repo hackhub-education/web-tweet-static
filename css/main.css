@@ -95,7 +95,7 @@ p {
 }
 
 .profile {
-    padding: 2rem 4rem;
+    padding: 32px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
