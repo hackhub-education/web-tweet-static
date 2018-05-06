@@ -36,6 +36,13 @@ h5 {
     margin: 0 5px;
 }
 
+h6 {
+    font-weight: 300;
+    color: #B4B4B4;
+    margin: 1rem 0;
+    font-size: .83rem;
+}
+
 p {
     font-weight: 300;
     font-size: 1rem;
