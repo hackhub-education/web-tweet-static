@@ -69,3 +69,5 @@ For backend support, reference to [Web Tweet Express](https://github.com/webdxd/
 1.6 [Login](https://github.com/webdxd/web-tweet-static/blob/1.6-login/notes/1.6-login.md)
 
 1.7 [Signup](https://github.com/webdxd/web-tweet-static/blob/1.7-signup/notes/1.7-signup.md)
+
+1.8 [ProfilePage](https://github.com/webdxd/web-tweet-static/blob/1.8-profile-page/notes/1.8-profile-page.md)
