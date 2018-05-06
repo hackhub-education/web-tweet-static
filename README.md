@@ -66,4 +66,4 @@ For backend support, reference to [Web Tweet Express](https://github.com/webdxd/
 
 1.5 [Form](https://github.com/webdxd/web-tweet-static/blob/1.5-form/notes/1.5-form.md)
 
-1.6 [Login](https://github.com/webdxd/web-tweet-static/blob/1.5-login/notes/1.5-login.md)
+1.6 [Login](https://github.com/webdxd/web-tweet-static/blob/1.6-login/notes/1.6-login.md)
