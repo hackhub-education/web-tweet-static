@@ -244,3 +244,12 @@ input:focus, textarea:focus {
     margin-left: 3rem;
     justify-content: space-between;
 }
+
+.relative {
+    position: relative;
+}
+
+.tweet-del {
+    position: absolute;
+    right: 0;
+}
