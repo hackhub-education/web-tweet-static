@@ -158,7 +158,7 @@ button:hover {
 }
 
 .user-auth {
-    align-items: flex-start
+    align-items: flex-start;
 }
 
 .hidden {
@@ -258,10 +258,15 @@ textarea.input-profile {
     position: relative;
 }
 
+.tweet-del {
+    position: absolute;
+    right: 0;
+}
+
 .fade-cover {
     width: 100%;
     height: 100%;
-    background: white;
+    background: #F8F8F8;
     position: absolute;
     top: 0;
     opacity: .7;
