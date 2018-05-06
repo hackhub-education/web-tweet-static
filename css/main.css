@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: #F8F8F8;
-    padding-top: 66px;
+    padding-top: 4rem;
 }
 
 textarea, input, button { 
@@ -142,7 +142,7 @@ button:hover {
 }
 
 .profile {
-    padding: 2rem 4rem;
+    padding: 32px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
