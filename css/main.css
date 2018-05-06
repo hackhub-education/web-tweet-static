@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: #F8F8F8;
-    padding-top: 66px;
+    padding-top: 4rem;
 }
 
 textarea, input, button { 
@@ -114,7 +114,7 @@ button:hover {
 
 .avatar {
     border-radius: 50%;
-    width: 150px;
+    width: 9rem;
     height: auto;
     max-width: 300px;
 }
@@ -142,7 +142,7 @@ button:hover {
 
 .avatar-sm {
     border-radius: 50%;
-    width: 35px;
+    width: 2rem;
     height: auto;
 }
 
@@ -151,7 +151,7 @@ button:hover {
 }
 
 .profile {
-    padding: 2rem 4rem;
+    padding: 32px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +179,7 @@ input, textarea {
     border: 1px solid #707070;
     padding: 10px 15px;
     height: 2.5rem;
-    min-height: 35px;
+    min-height: 2.5rem;
     flex-grow: 1;
     color: #707070;
     resize: none;
