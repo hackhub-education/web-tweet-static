@@ -175,7 +175,6 @@ button:hover {
 
 .input-tweet::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #29C9DE;
-    opacity: .5; /* Firefox */
 }
 
 .input-tweet:-ms-input-placeholder { /* Internet Explorer 10-11 */
