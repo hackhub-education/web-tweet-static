@@ -166,8 +166,8 @@ button:hover {
     border: 1px solid #29C9DE;
     padding: 10px 15px;
     height: 2.5rem;
-    min-height: 35px;
-    margin-left: 1rem;
+    min-height: 2.5rem;
+    margin-left: 16px;
     flex-grow: 1;
     color: #707070;
     resize: none;
@@ -196,6 +196,6 @@ button:hover {
 
 .tweet-actions {
     margin-top: 10px;
-    margin-left: 3rem;
+    margin-left: 48px;
     justify-content: space-between;
 }
