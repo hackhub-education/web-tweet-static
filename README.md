@@ -61,3 +61,5 @@ For backend support, reference to [Web Tweet Express](https://github.com/webdxd/
 1.2 [NavBar](https://github.com/webdxd/web-tweet-static/blob/1.2-navbar/notes/1.2-navbar.md)
 
 1.3 [Profile](https://github.com/webdxd/web-tweet-static/blob/1.3-profile/notes/1.3-profile.md)
+
+1.4 [Tweets](https://github.com/webdxd/web-tweet-static/blob/1.4-tweets/notes/1.4-tweets.md)
