@@ -1,0 +1,16 @@
+# Course Instructions 2.1
+## Load JSON file using AJAX and parse it in HTML
+
+* Include JQuery library
+    * Go to `https://code.jquery.com/` and pick the most recent JQuery CDN link and put it into your `index.html`
+    * Put the following script at the end of your `<body>` tag
+```
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+```
+* Verify you have successfully include JQuery by adding `<script> console.log($) </script>` after JQuery library `<script>`
+    * If you see `ƒ (e,t){return new w.fn.init(e,t)}` in your Chrome Inspector console, you are good to good
+    * If you see an error with `Uncaught ReferenceError: $ is not defined`, please go back and check your code
+* Use AJAX to load data from server API
+    * JQuery offers both a full-featured `$.ajax()` method, and simple convenience methods such as `$.get()`, `$.getScript()`, `$.getJSON()`, `$.post()`, and `$().load()`.
+    * For more information and examples about AJAX, check out [http://api.jquery.com/jquery.ajax/](http://api.jquery.com/jquery.ajax/)
+    * Replace your `console.log($)` code with the following AJAX code
