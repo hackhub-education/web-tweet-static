@@ -20,7 +20,7 @@ var loadAllTweets = () => {
                 if (tweet.imageUrl) {
                     $('<br><img src="' + tweet.imageUrl + '" alt="tweet">').appendTo(content)
                 }
-                $('#tweet-list').append(tweetContainer)
+                $('#tweet-list').prepend(tweetContainer)
             }
         },
         error: (err) => {
