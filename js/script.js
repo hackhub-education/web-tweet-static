@@ -36,6 +36,8 @@ if (localStorage.user) {
             console.log("Auth Check Failed")
         }
     });
+} else {
+    if (!(window.location.pathname === '/login.html' || window.location.pathname === '/signup.html')) window.location.replace("/login.html")
 }
 
 var prependTweet = (tweet) => {
@@ -189,4 +191,9 @@ $('#post-btn').click(() => {
         }
     });
 
+})
+
+$('#logout-btn').click(() => {
+    localStorage.clear()
+    window.location.replace("/login.html")
 })
