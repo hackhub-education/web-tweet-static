@@ -207,3 +207,38 @@ $('#logout-btn').click(() => {
     localStorage.clear()
     window.location.replace("/login.html")
 })
+
+$('#save-btn').click(() => {
+
+    let profile = {
+        name: $('#name-input').val(),
+        location: $('#location-input').val(),
+        bio: $('#bio-input').val()
+    }
+
+    $.ajax({
+        type: "PUT",
+        url: baseUrl + "profile/" + localStorage.user,
+        data: profile,
+        beforeSend: function (xhr) {
+            if (localStorage.token) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);
+            }
+        },
+        success: function (data) {
+            if (data.success) {
+                window.location.replace("/profile.html")
+            } else {
+                console.log(data.error.message)
+            }
+        },
+        error: function () {
+            console.log("Authentication Failed")
+        }
+    });
+
+})
+
+$('#cancel-btn').click(() => {
+    window.location.replace("/profile.html")
+})
