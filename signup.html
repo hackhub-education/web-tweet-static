@@ -24,37 +24,21 @@
     <div class="container">
         <div class="col-2of5 bg-white profile user-auth">
             <h3>Log in to Web Tweet</h3>
-            <form action="profile-edit.html">
-                <input class="input-auth" type="text" placeholder="Username" required>
-                <input class="input-auth" type="password" placeholder="Password" required>
-                <input class="input-auth" type="password" placeholder="Repeat password" required>
-                <button class="btn-primary">Sign up</button>
+            <form>
+                <input class="input-auth" type="text" placeholder="Username" id="username" required>
+                <input class="input-auth" type="password" placeholder="Password" id="password" required>
+                <input class="input-auth" type="password" placeholder="Repeat password" id="repeat-password" required>
+                <button class="btn-primary" type="button" id="signup-btn">Sign up</button>
             </form>
             <h6 class="">Have an account? <a href="login.html">Log in</a></h6> 
         </div>
         <div class="col-3of5 bg-white">
-            <div class="tweet">
-                <div class="row">
-                    <img class="avatar-sm" src="img/avatar.jpg" alt="avatar">   
-                    <h4><b>Yan Hong</b></h4>
-                    <h5>@honlyan</h5>
-                    <h5>April 27, 2018 6:14AM</h5>
-                </div>
-                <p>New WebDxD project is coming soon…</p>
-            </div>
-            <div class="tweet">
-                <div class="row">
-                    <img class="avatar-sm" src="img/ph-logo.png" alt="avatar">   
-                    <h4><b>Product Hunt</b></h4>
-                    <h5>@ProductHunt</h5>
-                    <h5>April 26, 2018 10:20PM</h5>
-                </div>
-                <p>Who goes to banks anymore? Not you, with this UK banking app 💰 https://www.producthunt.com/posts/starling-bank-2
-                    <br>
-                    <img src="img/tweet.jpg" alt="tweet">
-                </p>
-            </div>
+            <div id="tweet-list"></div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
