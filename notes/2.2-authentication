@@ -4,4 +4,4 @@
 ## Challenge
 * Form validation when user start typing
 * Strong password check use Regex
-* 
+* Refactor button click event handlers
