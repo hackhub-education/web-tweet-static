@@ -174,7 +174,7 @@ $('#post-btn').click(() => {
         success: function (data) {
             if (data.success) {
                 $('#tweet-form').trigger("reset")
-                // Append Tweet
+                $('#post-btn').prop('disabled', true)
                 prependTweet(data.tweet)
             } else {
                 console.log(data.error.message)
