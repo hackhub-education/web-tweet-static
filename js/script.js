@@ -38,7 +38,7 @@ if (localStorage.user) {
     });
 }
 
-var appendTweet = (tweet) => {
+var prependTweet = (tweet) => {
     let tweetContainer = $('<div>').addClass('tweet').append()
     let row = $('<div>').addClass('row').appendTo(tweetContainer)
     $('<img>').addClass('avatar-sm').attr({
@@ -52,7 +52,7 @@ var appendTweet = (tweet) => {
     if (tweet.imageUrl) {
         $('<br><img src="' + tweet.imageUrl + '" alt="tweet">').appendTo(content)
     }
-    $('#tweet-list').append(tweetContainer)
+    $('#tweet-list').prepend(tweetContainer)
 }
 
 var loadAllTweets = () => {
@@ -62,7 +62,7 @@ var loadAllTweets = () => {
         url: baseUrl + 'tweet',
         success: (data) => {
             for (let tweet of data.tweets) {
-                appendTweet(tweet)
+                prependTweet(tweet)
             }
         },
         error: (err) => {
@@ -175,7 +175,7 @@ $('#post-btn').click(() => {
             if (data.success) {
                 $('#tweet-form').trigger("reset")
                 // Append Tweet
-                appendTweet(data.tweet)
+                prependTweet(data.tweet)
             } else {
                 console.log(data.error.message)
             }
