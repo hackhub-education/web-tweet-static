@@ -1,7 +1,7 @@
 var baseUrl = 'http://localhost:3000/'
 
 var displayUser = (user) => {
-    let profile = $('.profile')
+    let profile = $('.profile-content')
     $('<img>').addClass('avatar').attr({
         'src': user.avatarUrl,
         'alt': 'avatar'
@@ -62,7 +62,11 @@ var loadAllTweets = () => {
         url: baseUrl + 'tweet',
         success: (data) => {
             for (let tweet of data.tweets) {
-                prependTweet(tweet)
+                if (window.location.pathname === '/profile.html') {
+                    if (tweet.author._id === localStorage.user)  prependTweet(tweet)
+                } else {
+                    prependTweet(tweet)
+                }   
             }
         },
         error: (err) => {
