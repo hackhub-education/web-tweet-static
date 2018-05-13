@@ -36,31 +36,40 @@ var signupForm = () => {
 
         let newUser = {
             username: $('#username').val(),
-            password: $('#password').val()
+            password: $('#password').val(),
+            repeatPassword: $('#repeat-password').val()
         }
 
-        console.log(newUser)
-
-        $.ajax({
-            type: "POST",
-            url: baseUrl + "auth/signup",
-            data: newUser,
-            success: function (data) {
-                if (data.error) {
-                    console.log(data.error.message)
-                } else {
-                    console.log(data)
-                    // localStorage.token = data.token;
-                    // alert('Got a token from the server! Token: ' + data.token);
+        $('.error-msg').remove()
+        $('form input').removeClass('input-alert')
+        
+        if (!newUser.username) {
+            $('#username').addClass('input-alert').before($('<span>').addClass('error-msg').text('Username required'))
+        } else if (!newUser.password) {
+            $('#password').addClass('input-alert').before($('<span>').addClass('error-msg').text('Password required'))
+        } else if (newUser.password !== newUser.repeatPassword) {
+            $('#repeat-password').addClass('input-alert').before($('<span>').addClass('error-msg').text('Password does not match'))
+        } else {
+            $.ajax({
+                type: "POST",
+                url: baseUrl + "auth/signup",
+                data: newUser,
+                success: function (data) {
+                    if (data.error) {
+                        console.log(data.error.message)
+                    } else {
+                        console.log(data)
+                        localStorage.token = data.token;
+                        alert('Got a token from the server! Token: ' + data.token);
+                    }
+                    $('#signup-form').trigger("reset");
+                },
+                error: function () {
+                    alert("Signup Failed");
                 }
-            },
-            error: function () {
-                alert("Signup Failed");
-            }
-        });
-
+            });
+        }
     })
-
 }
 
 loadAllTweets()

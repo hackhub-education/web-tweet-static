@@ -288,3 +288,11 @@ textarea.input-profile {
 .img-edit:hover .avatar-upload {
     opacity: 1;
 }
+
+.input-alert {
+    border-color: #fb0000;
+}
+
+.error-msg {
+    color: #fb0000;
+}
