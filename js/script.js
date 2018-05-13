@@ -53,7 +53,7 @@ if (localStorage.user) {
 var prependTweet = (tweet) => {
     let tweetContainer = $('<div>').addClass('tweet').append()
     let row = $('<div>').addClass('row').appendTo(tweetContainer)
-    $('<img>').addClass('avatar-sm').attr({
+    $('<img>').addClass('tweet-avatar').attr({
         'src': tweet.author.avatarUrl,
         'alt': 'avatar'
     }).appendTo(row)

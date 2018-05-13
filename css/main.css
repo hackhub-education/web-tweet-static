@@ -141,7 +141,7 @@ button:hover {
     margin-left: 3rem;
 }
 
-.avatar-sm {
+.avatar-sm, .tweet-avatar {
     border-radius: 50%;
     width: 2rem;
     height: auto;
