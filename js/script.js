@@ -29,11 +29,11 @@ if (localStorage.user) {
                 }
             } else {
                 localStorage.user = null
-                window.location.replace("/login.html");
+                window.location.replace("/login.html")
             }
         },
         error: function () {
-            alert("Auth Check Failed");
+            console.log("Auth Check Failed")
         }
     });
 }
@@ -104,7 +104,7 @@ $('#signup-btn').click(() => {
 
             },
             error: function () {
-                alert("Signup Failed");
+                console.log("Signup Failed")
             }
         });
     }
@@ -141,8 +141,44 @@ $('#login-btn').click(() => {
                 }
             },
             error: function () {
-                alert("Login Failed");
+                console.log("Login Failed")
             }
         });
     }
+})
+
+var newTweet = {}
+
+$('#tweet-content').keyup(() => {
+    newTweet.content = $('#tweet-content').val()
+    newTweet.content ? $('#post-btn').prop('disabled', false) : $('#post-btn').prop('disabled', true)
+})
+
+$('#post-btn').click(() => {
+
+    $.ajax({
+        type: "POST",
+        url: baseUrl + "tweet",
+        data: {
+            content: newTweet.content
+        },
+        beforeSend: function (xhr) {
+            if (localStorage.token) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);
+            }
+        },
+        success: function (data) {
+            if (data.success) {
+                $('#tweet-form').trigger("reset")
+                // Append Tweet
+                console.log(data.tweet)
+            } else {
+                console.log(data.error.message)
+            }
+        },
+        error: function () {
+            console.log("Authentication Failed")
+        }
+    });
+
 })

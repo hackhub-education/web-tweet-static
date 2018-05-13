@@ -54,6 +54,7 @@ button {
     opacity: .8;
     transition: opacity .3s ease;
     text-align: center;
+    transition: background-color .3s ease, border-color .3s ease;
 }
 
 button:hover {
@@ -295,4 +296,9 @@ textarea.input-profile {
 
 .error-msg {
     color: #fb0000;
+}
+
+button:disabled {
+    background-color: #ddd;
+    border-color: #ddd
 }
