@@ -13,6 +13,14 @@ var displayUser = (user) => {
     $('.avatar-sm').attr('src', user.avatarUrl)
 }
 
+var displayUserEdit = (user) => {
+    $('#avatar-image').attr('src', user.avatarUrl)
+    $('#name-input').val(user.name)
+    $('#username').text('@' + user.username)
+    $('#location-input').val(user.location)
+    $('#bio-input').val(user.bio)
+}
+
 if (localStorage.user) {
     $.ajax({
         type: "GET",
@@ -26,6 +34,8 @@ if (localStorage.user) {
             if (data.success) {
                 if (window.location.pathname === '/index.html' || window.location.pathname === '/profile.html') {
                     displayUser(data.profile)
+                } else if (window.location.pathname === '/profile-edit.html') {
+                    displayUserEdit(data.profile)
                 }
             } else {
                 localStorage.user = null
@@ -64,7 +74,7 @@ var loadAllTweets = () => {
         url: baseUrl + 'tweet',
         success: (data) => {
             for (let tweet of data.tweets) {
-                if (window.location.pathname === '/profile.html') {
+                if (window.location.pathname === '/profile.html' || window.location.pathname === '/profile-edit.html') {
                     if (tweet.author._id === localStorage.user)  prependTweet(tweet)
                 } else {
                     prependTweet(tweet)
