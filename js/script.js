@@ -1,4 +1,4 @@
-var baseUrl = 'http://localhost:3000/'
+var baseUrl = 'http://tweet-api.webdxd.com/'
 
 var loadAllTweets = () => {
 
@@ -7,9 +7,7 @@ var loadAllTweets = () => {
         url: baseUrl + 'tweet',
         success: (data) => {
             for (let tweet of data.tweets) {
-                console.log(tweet);
-    
-                let tweetContainer = $('<div>').addClass('tweet').append()
+                let tweetContainer = $('<div>').addClass('tweet').prependTo($('#tweet-list'))
                 let row = $('<div>').addClass('row').appendTo(tweetContainer)
                 $('<img>').addClass('avatar-sm').attr({
                     'src': tweet.author.avatarUrl,
@@ -22,7 +20,6 @@ var loadAllTweets = () => {
                 if (tweet.imageUrl) {
                     $('<br><img src="' + tweet.imageUrl + '" alt="tweet">').appendTo(content)
                 }
-                $('#tweet-list').prepend(tweetContainer)
             }
         },
         error: (err) => {
