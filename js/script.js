@@ -1,4 +1,4 @@
-var baseUrl = 'http://localhost:3000/'
+var baseUrl = 'http://tweet-api.webdxd.com/'
 
 var displayUser = (user) => {
     let profile = $('.profile-content')
