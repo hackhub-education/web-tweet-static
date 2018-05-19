@@ -51,8 +51,8 @@ if (localStorage.user) {
 }
 
 var prependTweet = (tweet) => {
-    let tweetContainer = $('<div>').addClass('tweet').append()
-    let row = $('<div>').addClass('row').appendTo(tweetContainer)
+    let tweetContainer = $('<div>').addClass('tweet').attr('id', tweet._id).append()
+    let row = $('<div>').addClass('row relative').appendTo(tweetContainer)
     $('<img>').addClass('tweet-avatar').attr({
         'src': tweet.author.avatarUrl,
         'alt': 'avatar'
@@ -63,6 +63,9 @@ var prependTweet = (tweet) => {
     let content = $('<p>').text(tweet.content).appendTo(tweetContainer)
     if (tweet.imageUrl) {
         $('<br><img src="' + tweet.imageUrl + '" alt="tweet">').appendTo(content)
+    }
+    if (window.location.pathname === '/profile.html') {
+        $('<button class="btn-clear tweet-del" id="delete-tweet-btn"><i class="far fa-trash-alt"></i></button>').appendTo(row)
     }
     $('#tweet-list').prepend(tweetContainer)
 }
@@ -261,4 +264,8 @@ $('#save-btn').click(() => {
 
 $('#cancel-btn').click(() => {
     window.location.replace("/profile.html")
+})
+
+$('#tweet-list').on('click', '#delete-tweet-btn', () => {
+    
 })
