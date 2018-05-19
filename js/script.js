@@ -75,10 +75,10 @@ var loadAllTweets = () => {
         success: (data) => {
             for (let tweet of data.tweets) {
                 if (window.location.pathname === '/profile.html' || window.location.pathname === '/profile-edit.html') {
-                    if (tweet.author._id === localStorage.user)  prependTweet(tweet)
+                    if (tweet.author._id === localStorage.user) prependTweet(tweet)
                 } else {
                     prependTweet(tweet)
-                }   
+                }
             }
         },
         error: (err) => {
@@ -194,7 +194,7 @@ $('#post-btn').click(() => {
         success: function (data) {
             if (data.success) {
                 $('#tweet-form').trigger("reset")
-                uploadcare.Widget('#tweet-image').value(null);
+                uploadcare.Widget('#tweet-image').value(null)
                 $('.uploadcare--widget').hide();
                 $('#post-btn').prop('disabled', true)
                 prependTweet(data.tweet)
@@ -214,12 +214,26 @@ $('#logout-btn').click(() => {
     window.location.replace("/login.html")
 })
 
+$('#avatar-file-btn').click(() => {
+    uploadcare.Widget('#avatar-file').openDialog()
+    let widget = uploadcare.Widget('#avatar-file')
+    widget.onChange((file) => {
+        if (file) {
+            file.done((info) => {
+                // Handle uploaded file info.
+                $('#avatar-image').attr('src', info.originalUrl)
+            });
+        };
+    });
+})
+
 $('#save-btn').click(() => {
 
     let profile = {
         name: $('#name-input').val(),
         location: $('#location-input').val(),
-        bio: $('#bio-input').val()
+        bio: $('#bio-input').val(),
+        avatarUrl: $('#avatar-image').attr('src')
     }
 
     $.ajax({

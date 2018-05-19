@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome-all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/columns.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.3.0/uploadcare.full.min.js"></script>        
 </head>
 
 <body>
@@ -38,8 +39,8 @@
             <form class="profile" action="profile.html">
                 <div class="relative img-edit">
                     <img class="avatar" src="img/sample-avatar.png" alt="avatar" id="avatar-image">
-                    <input class="hidden" type="file">
-                    <img class="avatar-upload" src="img/upload.png" alt="upload-img">
+                    <input type="hidden" role="uploadcare-uploader" name="content" id="avatar-file" data-public-key="7d92f12ba9b3c1d2afd1" data-images-only />
+                    <img class="avatar-upload" src="img/upload.png" alt="upload-img" id="avatar-file-btn">
                 </div>
                 <input class="input-profile" type="text" id="name-input" placeholder="Full name">
                 <h5 id="username"></h5>
