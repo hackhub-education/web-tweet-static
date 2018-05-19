@@ -174,14 +174,18 @@ $('#tweet-content').keyup(() => {
     newTweet.content ? $('#post-btn').prop('disabled', false) : $('#post-btn').prop('disabled', true)
 })
 
+$('#tweet-image-btn').click(() => {
+    uploadcare.Widget('#tweet-image').openDialog();
+    $('.uploadcare--widget').show();
+})
+
 $('#post-btn').click(() => {
+    newTweet.imageUrl = $('#tweet-image').val() || null
 
     $.ajax({
         type: "POST",
         url: baseUrl + "tweet",
-        data: {
-            content: newTweet.content
-        },
+        data: newTweet,
         beforeSend: function (xhr) {
             if (localStorage.token) {
                 xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);
@@ -190,6 +194,8 @@ $('#post-btn').click(() => {
         success: function (data) {
             if (data.success) {
                 $('#tweet-form').trigger("reset")
+                uploadcare.Widget('#tweet-image').value(null);
+                $('.uploadcare--widget').hide();
                 $('#post-btn').prop('disabled', true)
                 prependTweet(data.tweet)
             } else {

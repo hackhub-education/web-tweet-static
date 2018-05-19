@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/fontawesome-all.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/columns.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.3.0/uploadcare.full.min.js"></script>
 </head>
 <body>
     <nav class="nav-bar">
@@ -35,7 +36,7 @@
                         <textarea class="input-tweet" placeholder="What's up?" id="tweet-content"></textarea>
                     </div>
                     <div class="row tweet-actions">
-                        <input class="hidden" type="file" id="tweet-image">
+                        <input type="hidden" role="uploadcare-uploader" name="content" id="tweet-image" data-public-key="7d92f12ba9b3c1d2afd1" data-images-only />
                         <button class="btn-clear" type="button"><i class="far fa-image" id="tweet-image-btn"></i></button>
                         <button class="btn-primary" type="button" id="post-btn" disabled>Post</button>
                     </div>

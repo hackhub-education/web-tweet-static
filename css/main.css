@@ -308,3 +308,7 @@ button:disabled {
     flex-direction: column;
     align-items: center;
 }
+
+.uploadcare--widget, .uploadcare--widget__button {
+    display: none;
+}
