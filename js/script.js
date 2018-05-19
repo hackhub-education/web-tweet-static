@@ -258,7 +258,7 @@ $('#save-btn').click(() => {
         error: function () {
             console.log("Authentication Failed")
         }
-    });
+    })
 
 })
 
@@ -266,6 +266,26 @@ $('#cancel-btn').click(() => {
     window.location.replace("/profile.html")
 })
 
-$('#tweet-list').on('click', '#delete-tweet-btn', () => {
-    
+$('#tweet-list').on('click', '#delete-tweet-btn', (e) => {
+    let tweetId = $(e.target).parent().parent().parent().attr('id')
+
+    $.ajax({
+        type: "DELETE",
+        url: baseUrl + "tweet/" + tweetId,
+        beforeSend: function (xhr) {
+            if (localStorage.token) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + localStorage.token);
+            }
+        },
+        success: function (data) {
+            if (data.success) {
+                $('#' + tweetId).remove()
+            } else {
+                console.log(data.error.message)
+            }
+        },
+        error: function () {
+            console.log("Authentication Failed")
+        }
+    });
 })
