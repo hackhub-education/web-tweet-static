@@ -284,11 +284,14 @@ textarea.input-profile {
 
 .img-edit {
     cursor: pointer;
-    height: 9rem;
 }
 
 .img-edit:hover .avatar-upload {
     opacity: 1;
+}
+
+.img-edit .avatar {
+    height: 9rem;
 }
 
 .input-alert {
