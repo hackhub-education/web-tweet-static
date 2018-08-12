@@ -56,6 +56,7 @@ $('#signup-btn').click(() => {
             success: function (data) {
                 if (data.success) {
                     localStorage.token = data.token
+                    localStorage.user = data.profile._id
                     $('#signup-form').trigger("reset")
                     window.location.replace("/profile-edit.html");
                 } else {
@@ -64,7 +65,7 @@ $('#signup-btn').click(() => {
                 
             },
             error: function () {
-                alert("Signup Failed");
+                console.log("Signup Failed")
             }
         });
     }
@@ -93,6 +94,7 @@ $('#login-btn').click(() => {
             success: function (data) {
                 if (data.success) {
                     localStorage.token = data.token
+                    localStorage.user = data.profile._id
                     $('#login-form').trigger("reset")
                     window.location.replace("/index.html")
                 } else {
@@ -100,7 +102,7 @@ $('#login-btn').click(() => {
                 }
             },
             error: function () {
-                alert("Login Failed");
+                console.log("Login Failed")
             }
         });
     }
