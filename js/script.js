@@ -91,7 +91,6 @@ $('#login-btn').click(() => {
             url: baseUrl + "auth/login",
             data: user,
             success: function (data) {
-                console.log(data)
                 if (data.success) {
                     localStorage.token = data.token
                     $('#login-form').trigger("reset")
