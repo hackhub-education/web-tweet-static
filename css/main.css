@@ -19,6 +19,29 @@ a {
     color: #29C9DE;
 }
 
+h4 {
+    font-weight: 500;
+    color: #707070;
+    margin: 1rem;
+    font-size: .83rem;
+}
+
+h5 {
+    font-weight: 300;
+    color: #B4B4B4;
+    margin: 0;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.center {
+    text-align: center;
+}
+
 .bg-white {
     background-color: #FFF;
 }
@@ -57,6 +80,12 @@ a {
     margin-right: 1rem;
 }
 
+.avatar {
+    border-radius: 50%;
+    width: 50%;
+    max-width: 300px;
+}
+
 .avatar-sm {
     border-radius: 50%;
     width: 2rem;
@@ -64,4 +93,11 @@ a {
 
 .logo {
     width: 2rem;
+}
+
+.profile {
+    padding: 32px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
