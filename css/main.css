@@ -105,7 +105,7 @@ button:hover {
 
 .avatar {
     border-radius: 50%;
-    width: 150px;
+    width: 9rem;
     height: auto;
     max-width: 300px;
 }
@@ -133,7 +133,7 @@ button:hover {
 
 .avatar-sm {
     border-radius: 50%;
-    width: 35px;
+    width: 2rem;
     height: auto;
 }
 
@@ -166,7 +166,7 @@ button:hover {
     border: 1px solid #29C9DE;
     padding: 10px 15px;
     height: 2.5rem;
-    min-height: 35px;
+    min-height: 2.5rem;
     margin-left: 1rem;
     flex-grow: 1;
     color: #707070;
@@ -175,7 +175,6 @@ button:hover {
 
 .input-tweet::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #29C9DE;
-    opacity: .5; /* Firefox */
 }
 
 .input-tweet:-ms-input-placeholder { /* Internet Explorer 10-11 */
